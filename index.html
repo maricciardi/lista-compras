@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de compras</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="desktop-only">
+        <img src="assets/logo.png" alt="">
+    </header>
+    <section id="main">
+        <a href="#"><img src="assets/icons/left-arrow.svg" alt="botão voltar"> Voltar</a>
+        <h1>Compras da semana</h1>
+        <form>
+            <fieldset>
+                <input type="text" placeholder="Adicione um novo item">
+                <button>Adicionar item</button>
+            </fieldset>
+        </form>
+        <div id="itens">
+            <div class="item">
+                <input type="checkbox" name="check" id="check">
+                <label for="check">Pão de forma</label>
+                <img src="assets/icons/trash.svg" alt="ícone de lixeira">
+            </div>
+
+            <div class="item">
+                <input type="checkbox" name="check" id="check">
+                <label for="check">Café preto</label>
+                <img src="assets/icons/trash.svg" alt="ícone de lixeira">
+            </div>
+
+            <div class="item">
+                <input type="checkbox" name="check" id="check">
+                <label for="check">Suco de laranja</label>
+                <img src="assets/icons/trash.svg" alt="ícone de lixeira">
+            </div>
+        </div>
+        <div id="alert">
+            <img src="assets/icons/warning.svg">
+            <p>O item foi removido da lista</p>
+            <img src="assets/icons/x.svg" alt="">
+        </div>
+    </section>  
+</body>
+</html>
