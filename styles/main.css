@@ -3,7 +3,7 @@
     padding-inline: 2rem;
     width: 100%;
 
-    h1 {
+    & h1 {
         font: var(--title);
         margin-top: 1rem;
     }
@@ -24,20 +24,68 @@ fieldset {
     gap: 1rem;
 }
 
-input {
+input[type="text"] {
     height: 2.75rem;
     border-radius: .75rem;
     background-color: var(--bg-secondary);
-    border: solid 2px var(--border-primary);
+    border: 2px solid transparent;
+    outline: 2px solid var(--border-primary);
     font: var(--label);
     max-width: 28rem;
     padding: 1rem;
+    
+
+    &:hover {
+        border-color: var(--border-hover);
+        border: 2px solid transparent;
+        outline: 2px solid var(--border-hover);
+    }
+
+    &:focus, &:focus-within {
+        color: var(--content-primary);
+        border: 2px solid transparent;
+        outline: 2px solid var(--color-brand);
+        font: 500 1rem/1.25 var(--ff);
+    }
 }
+
+
+
 
 input::placeholder {
     color: var(--content-tertiary);
     font: var(--placeholder);
 }
+
+.checkbox-wrapper {
+    position: relative;
+    cursor: pointer;
+
+    & [type="checkbox"] {
+        all: unset;
+        position: absolute;
+        inset: 0;
+    }
+
+    & .checkbox-image {
+        flex: 0 0 1rem;
+        height: 1.05rem;
+        width: 1.05rem;
+        background-image: url(../assets/icons/checkbox-default.svg);
+    }
+
+    &:hover, &:focus-within {
+        & .checkbox-image {
+            background-image: url(../../assets/icons/checkbox-hover.svg);
+        }
+    }
+
+    &:has(:checked) .checkbox-image {
+        background-image: url(../../assets/icons/checkbox-checked.svg);
+    }
+}
+   
+
 
 button {
     cursor: pointer;
@@ -46,7 +94,12 @@ button {
     border-radius: .75rem;
     background-color: var(--color-brand);
     font: var(--paragraph);
-    color: var(--always-white)
+    color: var(--always-white);
+    padding: .75rem 1.5rem;
+
+    &:hover {
+        background-color: var(--color-brand-hover);
+    }
 }
 
 #itens {
@@ -70,5 +123,21 @@ button {
         font: var(--paragraph);
         color: var(--content-secondary);
     }
+
+    & img[src*="trash"]:hover {
+        cursor: pointer;
+    }
 }
 
+
+@media (width >= 80em) {
+    #main {
+        max-width: 40rem;
+    }
+
+   
+
+    fieldset {
+        grid-template-columns: 1fr auto;
+    }
+}

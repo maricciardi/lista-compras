@@ -1,0 +1,17 @@
+.alert {
+    display: grid;
+    background-color: var(--color-danger);
+    padding: .75rem;
+    margin-top: 2rem;
+    color: var(--always-white);
+    align-items: center;
+    font: var(--label);
+    grid-template-columns: auto 1fr auto;
+    gap: .5rem;
+    border-radius: .75rem;
+
+    & img[src*="/x"]:hover {
+        cursor: pointer;
+    }
+}
+
