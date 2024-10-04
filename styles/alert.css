@@ -1,5 +1,5 @@
-.alert {
-    display: grid;
+#alert {
+    display: none;
     background-color: var(--color-danger);
     padding: .75rem;
     margin-top: 2rem;

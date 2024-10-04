@@ -13,48 +13,23 @@
     <header class="desktop-only">
         <img src="assets/logo.png" alt="">
     </header>
+
     <section id="main">
         <a href="#"><img src="assets/icons/left-arrow.svg" alt="botão voltar"> Voltar</a>
         <h1>Compras da semana</h1>
         <form>
             <fieldset>
-                <input type="text" placeholder="Adicione um novo item">
-                <button>Adicionar item</button>
+                <input type="text" placeholder="Adicione um novo item" name="newItem" id="input">
+                <button type="submit">Adicionar item</button>
             </fieldset>
         </form>
-        <div id="itens">
-            <div class="item">
-                <div class="checkbox-wrapper">
-                    <div class="checkbox-image"></div>
-                    <input type="checkbox" name="check" id="check">
-                </div>
-                <label for="check">Pão de forma</label>
-                <img src="assets/icons/trash.svg" alt="ícone de lixeira">
-            </div>
-
-            <div class="item">
-                <div class="checkbox-wrapper">
-                    <div class="checkbox-image"></div>
-                    <input type="checkbox" name="check" id="check">
-                </div>
-                <label for="check">Café preto</label>
-                <img src="assets/icons/trash.svg" alt="ícone de lixeira">
-            </div>
-
-            <div class="item">
-                <div class="checkbox-wrapper">
-                    <div class="checkbox-image"></div>
-                    <input type="checkbox" name="check" id="check">
-                </div>
-                <label for="check">Suco de laranja</label>
-                <img src="assets/icons/trash.svg" alt="ícone de lixeira">
-            </div>
-        </div>
-        <div class="alert">
+        <ul id="itens"></ul>
+        <div id="alert">
             <img src="assets/icons/warning.svg">
             <p>O item foi removido da lista</p>
-            <img src="assets/icons/x.svg" alt="">
+            <img src="assets/icons/x.svg" onclick="closeAlert()"></img>
         </div>
     </section>  
 </body>
+<script src="script.js"></script>
 </html>
